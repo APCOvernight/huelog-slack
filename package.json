@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "huelog-slack",
   "version": "0.1.0",
-  "description": "HueStatus module for...",
+  "description": "HueStatus module for slack reporting.",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && nyc mocha",
@@ -30,7 +30,10 @@
     "stryker-mocha-framework": "^0.7.1",
     "stryker-mocha-runner": "^0.10.1"
   },
-  "repository": {},
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/APCOvernight/huelog-slack.git"
+    },
   "keywords": [
     "huestatus",
     "philips",
@@ -38,10 +41,10 @@
     "status",
     "light"
   ],
-  "author": "",
+  "author": "Mike Hingley",
   "license": "MIT",
-  "bugs": {},
-  "homepage": "",
+  "bugs":{"url":"https://github.com/APCOvernight/huelog-slack/issues"},
+  "homepage": "https://github.com/APCOvernight/huelog-slack#readme",
   "nyc": {
     "include": [
       "index.js"
@@ -73,5 +76,8 @@
       "cobertura"
     ],
     "cache": true
+  },
+  "directories": {
+    "test": "test"
   }
 }
