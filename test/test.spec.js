@@ -9,7 +9,7 @@ const SlackReport = require('../')
 
 let mockConfig
 
-describe('SlackReport Class', function () {
+describe('SlackReport Class', () => {
   beforeEach(() => {
     mockConfig = {
       name: 'SlackReport',
@@ -45,7 +45,7 @@ describe('SlackReport Class', function () {
   it('It logs - writing errors to the console', async () => {
     const moduleInstance = new SlackReport(mockConfig, {})
     moduleInstance.start()
-    const logStub = sinon.stub(moduleInstance.webhook, 'send').callsFake(function (a, s) { s('****') })
+    const logStub = sinon.stub(moduleInstance.webhook, 'send').callsFake((a, s) => { s('****') })
     const consoleStub = sinon.stub(console, 'error')
     moduleInstance.log('1', '2', '3')
     expect(JSON.stringify(logStub.args[0][0])).to.equal(JSON.stringify({ text: '3' }))
@@ -58,7 +58,7 @@ describe('SlackReport Class', function () {
   it('It logs - no errors to the console', async () => {
     const moduleInstance = new SlackReport(mockConfig, {})
     moduleInstance.start()
-    const logStub = sinon.stub(moduleInstance.webhook, 'send').callsFake(function (a, s) { s(undefined) })
+    const logStub = sinon.stub(moduleInstance.webhook, 'send').callsFake((a, s) => { s(undefined) })
     const consoleStub = sinon.stub(console, 'error')
     moduleInstance.log('1', '2', '3')
     expect(JSON.stringify(logStub.args[0][0])).to.equal(JSON.stringify({ text: '3' }))
