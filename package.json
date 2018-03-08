@@ -10,7 +10,7 @@
     "stryker": "stryker run"
   },
   "dependencies": {
-    "@slack/client": "^3.14.2",
+    "@slack/client": "^4.0.0",
     "requireg": "^0.1.7",
     "slack-client": "^2.0.6"
   },
