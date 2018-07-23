@@ -31,7 +31,7 @@ describe('SlackReport Class', () => {
     const moduleInstance = new SlackReport(mockConfig, {})
     moduleInstance.start()
     expect(moduleInstance.url).to.equal(mockConfig.slackWebhookUrl)
-    expect(moduleInstance.webhook._slackUrl).to.equal(mockConfig.slackWebhookUrl)
+    expect(moduleInstance.webhook.url).to.equal(mockConfig.slackWebhookUrl)
   })
 
   it('It should throw a missing setting exception if slack URL is missing', async () => {
