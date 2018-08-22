@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@slack/client": "^4.0.0",
-    "requireg": "^0.1.7"
+    "requireg": "^0.2.1"
   },
   "devDependencies": {
     "apc-style": "1.2.0",
